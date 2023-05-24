@@ -38,7 +38,7 @@
 		position: fixed;
 		left: 0;
 		top: 0;
-		width: 100vw;
+		width: 100%;
 		height: 7vh;
 
 		z-index: 5;
@@ -71,6 +71,10 @@
 
 	/*     */
 
+	footer {
+		width: 100%;
+	}
+
 	footer .holder {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -88,5 +92,12 @@
 	footer .holder .icons img:hover {
 		filter: invert(61%) sepia(36%) saturate(6613%) hue-rotate(331deg) brightness(103%)
 			contrast(108%);
+	}
+
+	@media only screen and (max-width: 600px) {
+		footer .holder {
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr 1fr;
+		}
 	}
 </style>

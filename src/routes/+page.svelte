@@ -171,4 +171,32 @@
 	.white-filter {
 		filter: brightness(0) saturate(100%) invert(100%);
 	}
+
+	/* */
+
+	@media only screen and (max-width: 600px) {
+		.content {
+		}
+
+		.content #me {
+			text-align: center;
+		}
+
+		.content .title {
+			font-size: 2.5rem;
+		}
+
+		.content .subtitle {
+			font-size: 1.5rem;
+		}
+
+		.skillsbox {
+			flex-direction: column;
+			gap: 0.25rem;
+		}
+
+		.skillsbox .skill {
+			margin: 0;
+		}
+	}
 </style>

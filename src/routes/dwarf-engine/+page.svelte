@@ -58,14 +58,6 @@
 				<img src="opentklogo.png" alt="OpenTKLogo" />
 				<p>OpenTK</p>
 			</a>
-			<a href="https://github.com/StbSharp/StbImageSharp">
-				<img src="{base}/dwarflogo.png" alt="DwarfLogo" />
-				<p>Stb Image bindings</p>
-			</a>
-			<a href="https://github.com/mellinoe/ImGui.NET">
-				<img src="{base}/dwarflogo.png" alt="DwarfLogo" />
-				<p>ImGui bindings</p>
-			</a>
 		</div>
 	</div>
 

@@ -41,4 +41,15 @@
 		margin-top: 4em;
 		margin-bottom: 30vh;
 	}
+
+	@media only screen and (max-width: 600px) {
+		.block {
+			margin-left: 1em;
+			margin-right: 1em;
+		}
+
+		img {
+			max-height: 20rem;
+		}
+	}
 </style>
