@@ -1,13 +1,11 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { Clock, Euler, MathUtils, Quaternion, Vector3 } from 'three';
-	import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 	import type { Scene } from '../lib/scene';
 	import Contact from './contact.svelte';
 
 	let cnv: HTMLCanvasElement;
 	let scene: Scene;
-	let controls: OrbitControls = OrbitControls.prototype;
 </script>
 
 <div class="content">
