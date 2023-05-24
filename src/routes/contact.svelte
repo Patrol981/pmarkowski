@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { MathUtils } from 'three';
 	import { Scene } from '../lib/scene';
+	import { base } from '$app/paths';
 
 	let cnv: HTMLCanvasElement;
 	let scene: Scene;
@@ -11,7 +12,7 @@
 	onMount(async () => {
 		scene = new Scene();
 		scene.createScene(cnv);
-		mailbox = await scene.loadModel('mail.obj', 'mail.png');
+		mailbox = await scene.loadModel(`${base}/mail.obj`, `${base}/mail.png`);
 		scene.resize(window.innerWidth / 2, window.innerHeight / 2);
 
 		scene.camera.translateZ(-1);
