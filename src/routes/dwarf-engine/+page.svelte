@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { base } from '$app/paths';
+</script>
+
 <div>
 	<div class="block">
 		<p>Dwarf Engine is my approach for game engines topic.</p>
@@ -35,19 +39,19 @@
 		<p class="title">Stack I used to create this engine</p>
 		<div class="stack">
 			<a href="https://dotnet.microsoft.com/en-us/download/dotnet/7.0">
-				<img src="dotnetlogo.png" alt="DotNetLogo" />
+				<img src="{base}/dotnetlogo.png" alt="DotNetLogo" />
 				<p>.NET 7</p>
 			</a>
 			<a href="https://github.com/amerkoleci/Vortice.Vulkan">
-				<img src="vulkanlogo.png" alt="VulkanLogo" />
+				<img src="{base}/vulkanlogo.png" alt="VulkanLogo" />
 				<p>Vulkan bindings</p>
 			</a>
 			<a href="https://bitbucket.org/Starnick/assimpnet/src/master/">
-				<img src="assimplogo.png" alt="AssimpLogo" />
+				<img src="{base}/assimplogo.png" alt="AssimpLogo" />
 				<p>Assimp bindings</p>
 			</a>
 			<a href="https://www.glfw.org/">
-				<img src="glfwlogo.png" alt="GLFWLogo" />
+				<img src="{base}/glfwlogo.png" alt="GLFWLogo" />
 				<p>GLFW</p>
 			</a>
 			<a href="https://opentk.net/">
@@ -55,11 +59,11 @@
 				<p>OpenTK</p>
 			</a>
 			<a href="https://github.com/StbSharp/StbImageSharp">
-				<img src="dwarflogo.png" alt="DwarfLogo" />
+				<img src="{base}/dwarflogo.png" alt="DwarfLogo" />
 				<p>Stb Image bindings</p>
 			</a>
 			<a href="https://github.com/mellinoe/ImGui.NET">
-				<img src="dwarflogo.png" alt="DwarfLogo" />
+				<img src="{base}/dwarflogo.png" alt="DwarfLogo" />
 				<p>ImGui bindings</p>
 			</a>
 		</div>

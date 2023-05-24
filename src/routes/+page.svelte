@@ -3,6 +3,7 @@
 	import { Clock, Euler, MathUtils, Quaternion, Vector3 } from 'three';
 	import type { Scene } from '../lib/scene';
 	import Contact from './contact.svelte';
+	import { base } from '$app/paths';
 
 	let cnv: HTMLCanvasElement;
 	let scene: Scene;
@@ -17,13 +18,13 @@
 		<p class="subtitle">Languages I use</p>
 		<div class="skillsbox">
 			<div class="skill selectable">
-				<img src="csharplogo.png" alt="C#" />
+				<img src="{base}/csharplogo.png" alt="C#" />
 			</div>
 			<div class="skill selectable">
-				<img src="clogo.png" alt="C" />
+				<img src="{base}/clogo.png" alt="C" />
 			</div>
 			<div class="skill selectable">
-				<img src="typescriptlogo.svg" alt="TypeScript" />
+				<img src="{base}/typescriptlogo.svg" alt="TypeScript" />
 			</div>
 		</div>
 	</div>
@@ -32,25 +33,25 @@
 		<p class="subtitle">Frameworks I use</p>
 		<div class="skillsbox">
 			<div class="skill selectable">
-				<img src="unitylogo.png" alt="Unity3D" />
+				<img src="{base}/unitylogo.png" alt="Unity3D" />
 			</div>
 			<div class="skill selectable white-filter">
-				<img src="denologo.png" alt="Deno" />
+				<img src="{base}/denologo.png" alt="Deno" />
 			</div>
 			<div class="skill selectable">
-				<img src="nodejslogo.png" alt="Node.js" />
+				<img src="{base}/nodejslogo.png" alt="Node.js" />
 			</div>
 			<div class="skill selectable">
-				<img src="sveltelogo.png" alt="Svelte" />
+				<img src="{base}/sveltelogo.png" alt="Svelte" />
 			</div>
 			<div class="skill selectable">
-				<img src="vuelogo.png" alt="Vue.js" />
+				<img src="{base}/vuelogo.png" alt="Vue.js" />
 			</div>
 			<div class="skill selectable">
-				<img src="nuxtlogo.png" alt="Nuxt.js" />
+				<img src="{base}/nuxtlogo.png" alt="Nuxt.js" />
 			</div>
 			<div class="skill selectable">
-				<img src="reactlogo.png" alt="React.js" />
+				<img src="{base}/reactlogo.png" alt="React.js" />
 			</div>
 		</div>
 	</div>
@@ -78,8 +79,8 @@
 	<div class="magnum-opus">
 		<p class="subtitle">Featured projects</p>
 		<div class="project selectable">
-			<a href="/dwarf-engine">
-				<img src="dwarflogo.png" alt="Dwarf Engine" />
+			<a href="{base}/dwarf-engine">
+				<img src="{base}/dwarflogo.png" alt="Dwarf Engine" />
 				<p>Dwarf Engine</p>
 			</a>
 		</div>

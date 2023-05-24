@@ -1,12 +1,14 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+
 	const date = new Date();
 </script>
 
 <nav>
 	<div>
-		<span><a href="/">Home</a></span>
-		<span><a href="/about">About</a></span>
-		<span><a href="/blog">My Blog</a></span>
+		<span><a href="{base}/">Home</a></span>
+		<span><a href="{base}/about">About</a></span>
+		<span><a href="{base}/blog">My Blog</a></span>
 	</div>
 </nav>
 
@@ -17,10 +19,10 @@
 		<p>Copyright &copy; Patryk Markowski {date.getFullYear()}</p>
 		<div class="icons">
 			<a href="https://github.com/Patrol981">
-				<img src="github.svg" alt="Github" />
+				<img src="{base}/github.svg" alt="Github" />
 			</a>
 			<a href="https://www.linkedin.com/in/patryk-markowski-366b541a1/">
-				<img src="linkedin.svg" alt="LinkedIn" />
+				<img src="{base}/linkedin.svg" alt="LinkedIn" />
 			</a>
 		</div>
 	</div>
