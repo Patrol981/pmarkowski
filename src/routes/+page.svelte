@@ -180,6 +180,8 @@
 
 		.content #me {
 			text-align: center;
+			margin-left: 1em;
+			margin-right: 1em;
 		}
 
 		.content .title {
@@ -192,11 +194,12 @@
 
 		.skillsbox {
 			flex-direction: column;
-			gap: 0.25rem;
 		}
 
 		.skillsbox .skill {
 			margin: 0;
+			margin-bottom: 2.5rem;
+			margin-top: 2.5rem;
 		}
 	}
 </style>
