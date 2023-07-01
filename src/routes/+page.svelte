@@ -76,15 +76,31 @@
 			</div>
 		</div>
 	</div>
-	<div class="magnum-opus">
+
+	<div class="skills">
 		<p class="subtitle">Featured projects</p>
-		<div class="project selectable">
-			<a href="{base}/dwarf-engine">
-				<img src="{base}/dwarflogo.png" alt="Dwarf Engine" />
-				<p>Dwarf Engine</p>
-			</a>
+		<div class="skillsbox">
+			<div class="skill selectable">
+				<a href="{base}/dwarf-engine">
+					<img src="{base}/dwarflogo.png" alt="Dwarf Engine" />
+					<p>Dwarf Engine</p>
+				</a>
+			</div>
+			<div class="skill selectable">
+				<a href="https://github.com/Patrol981/sql-designer">
+					<img src="{base}/no_img.png" alt="Sql Designer" />
+					<p>SQL Designer</p>
+				</a>
+			</div>
+			<div class="skill selectable">
+				<a href="https://github.com/Patrol981/Dwarf-FontGenerator">
+					<img src="{base}/no_img.png" alt="Dwarf Font Generator" />
+					<p>Dwarf Font Generator</p>
+				</a>
+			</div>
 		</div>
 	</div>
+
 	<Contact />
 </div>
 <canvas bind:this={cnv} />
