@@ -58,6 +58,10 @@
 				<img src="opentklogo.png" alt="OpenTKLogo" />
 				<p>OpenTK</p>
 			</a>
+			<a href="https://github.com/amerkoleci/JoltPhysicsSharp">
+				<img src="{base}/joltlogo.png" alt="JoltLogo" />
+				<p>Jolt Physics bindings</p>
+			</a>
 		</div>
 	</div>
 
