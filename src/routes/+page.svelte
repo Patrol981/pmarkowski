@@ -74,6 +74,9 @@
 			<div class="skill">
 				<p>AHA (Avoid hasty abstractions)</p>
 			</div>
+			<div class="skill">
+				<p>SOLID</p>
+			</div>
 		</div>
 	</div>
 

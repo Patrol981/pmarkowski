@@ -21,7 +21,7 @@
 				<p>3D</p>
 			</div>
 			<div class="feature">
-				<p>Preloaded assets</p>
+				<p>Block-styled Systems</p>
 			</div>
 			<div class="feature">
 				<p>Cross-platform</p>
@@ -63,6 +63,15 @@
 				<p>Jolt Physics bindings</p>
 			</a>
 		</div>
+	</div>
+
+	<div class="block">
+		<p class="title" />
+		<p>
+			For now it has no editor (might change in the future). Engine itself gives you an option to
+			switch parts of systems that you are interested in, for example You can use only UI and 2D
+			without 3D stuff being used
+		</p>
 	</div>
 
 	<div class="block">
