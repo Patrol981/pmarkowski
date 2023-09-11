@@ -90,6 +90,12 @@
 				</a>
 			</div>
 			<div class="skill selectable">
+				<a href="https://github.com/i-band-pl/drunken-halfling-engine">
+					<img src="{base}/dh_ico.png" alt="Drunken Halfling Engine" />
+					<p>DH Engine</p>
+				</a>
+			</div>
+			<div class="skill selectable">
 				<a href="https://github.com/Patrol981/sql-designer">
 					<img src="{base}/no_img.png" alt="Sql Designer" />
 					<p>SQL Designer</p>
