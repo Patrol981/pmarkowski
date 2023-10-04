@@ -45,10 +45,7 @@
 				<img src="{base}/sveltelogo.png" alt="Svelte" />
 			</div>
 			<div class="skill selectable">
-				<img src="{base}/vuelogo.png" alt="Vue.js" />
-			</div>
-			<div class="skill selectable">
-				<img src="{base}/nuxtlogo.png" alt="Nuxt.js" />
+				<img src="{base}/fresh.svg" alt="Fresh" />
 			</div>
 			<div class="skill selectable">
 				<img src="{base}/reactlogo.png" alt="React.js" />
@@ -90,21 +87,27 @@
 				</a>
 			</div>
 			<div class="skill selectable">
-				<a href="https://github.com/i-band-pl/drunken-halfling-engine">
-					<img src="{base}/dh_ico.png" alt="Drunken Halfling Engine" />
-					<p>DH Engine</p>
-				</a>
-			</div>
-			<div class="skill selectable">
 				<a href="https://github.com/Patrol981/sql-designer">
 					<img src="{base}/no_img.png" alt="Sql Designer" />
 					<p>SQL Designer</p>
 				</a>
 			</div>
 			<div class="skill selectable">
+				<a href="https://github.com/i-band-pl/drunken-halfling-engine">
+					<img src="{base}/dh_ico.png" alt="Drunken Halfling Engine" />
+					<p>DH Engine</p>
+				</a>
+			</div>
+			<div class="skill selectable">
 				<a href="https://github.com/Patrol981/Dwarf-FontGenerator">
 					<img src="{base}/no_img.png" alt="Dwarf Font Generator" />
 					<p>Dwarf Font Generator</p>
+				</a>
+			</div>
+			<div class="skill selectable">
+				<a href="https://github.com/Patrol981/image-processing">
+					<img src="{base}/camera.jpg" alt="ImageProcessing" />
+					<p>Image Processing</p>
 				</a>
 			</div>
 		</div>

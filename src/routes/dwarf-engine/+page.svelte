@@ -76,13 +76,9 @@
 
 	<div class="block">
 		<p class="title">Download</p>
-		<p>
-			Although, the project in it's newest form is not available for public (it will be in the
-			future, when I will implement all the nessesary stuff), you can check the prototype <a
-				class="link"
-				href="https://github.com/Patrol981/Dwarf-Engine">here</a
-			>
-		</p>
+		<a class="link" href="https://github.com/Patrol981/Dwarf-Engine">
+			https://github.com/Patrol981/Dwarf-Engine
+		</a>
 	</div>
 </div>
 
