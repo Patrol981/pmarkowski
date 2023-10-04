@@ -33,6 +33,9 @@
 		<p class="subtitle">Frameworks I use</p>
 		<div class="skillsbox">
 			<div class="skill selectable">
+				<img src="{base}/dotnetlogo.png" alt=".NET" />
+			</div>
+			<div class="skill selectable">
 				<img src="{base}/unitylogo.png" alt="Unity3D" />
 			</div>
 			<div class="skill selectable white-filter">
