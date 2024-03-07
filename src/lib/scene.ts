@@ -5,12 +5,14 @@ class Scene {
   scene: THREE.Scene;
   camera: THREE.PerspectiveCamera;
   renderer: THREE.WebGLRenderer;
+  clock: THREE.Clock;
+
   loader = new OBJLoader();
   textureLoader = new THREE.TextureLoader();
 
-  constructor(fov = 75) {
+  constructor(fov = 75, far = 100) {
     this.scene = new THREE.Scene();
-    this.camera = new THREE.PerspectiveCamera(fov, 700 / 700, 0.1, 100);
+    this.camera = new THREE.PerspectiveCamera(fov, 700 / 700, 0.1, far);
     this.camera.position.z = 5;
 
     this.renderer = THREE.WebGLRenderer.prototype;
@@ -20,6 +22,8 @@ class Scene {
 
     this.scene.add(light);
     this.scene.add(directionalLight);
+
+    this.clock = new THREE.Clock();
   }
 
   public resize(x: number, y: number) {
@@ -53,6 +57,13 @@ class Scene {
     return this.camera;
   }
 
+  public getElapsedTime(): number {
+    return this.clock.elapsedTime;
+  }
+
+  public getDeltaTime(): number {
+    return this.clock.getDelta();
+  }
 }
 
 export { Scene };

@@ -72,7 +72,7 @@
 	/*     */
 
 	footer {
-		width: 100%;
+		background-color: rgba(28, 28, 33, 0.6);
 	}
 
 	footer .holder {

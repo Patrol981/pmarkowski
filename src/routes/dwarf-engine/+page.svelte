@@ -27,7 +27,7 @@
 				<p>Cross-platform</p>
 			</div>
 			<div class="feature">
-				<p>Custom asset language</p>
+				<p>Asset System</p>
 			</div>
 			<div class="feature">
 				<p>Entity Component System</p>
@@ -40,15 +40,11 @@
 		<div class="stack">
 			<a href="https://dotnet.microsoft.com/en-us/download/dotnet/7.0">
 				<img src="{base}/dotnetlogo.png" alt="DotNetLogo" />
-				<p>.NET 7</p>
+				<p>.NET 8</p>
 			</a>
 			<a href="https://github.com/amerkoleci/Vortice.Vulkan">
 				<img src="{base}/vulkanlogo.png" alt="VulkanLogo" />
 				<p>Vulkan bindings</p>
-			</a>
-			<a href="https://bitbucket.org/Starnick/assimpnet/src/master/">
-				<img src="{base}/assimplogo.png" alt="AssimpLogo" />
-				<p>Assimp bindings</p>
 			</a>
 			<a href="https://www.glfw.org/">
 				<img src="{base}/glfwlogo.png" alt="GLFWLogo" />
@@ -77,7 +73,7 @@
 	<div class="block">
 		<p class="title">Download</p>
 		<a class="link" href="https://github.com/Patrol981/Dwarf-Engine">
-			https://github.com/Patrol981/Dwarf-Engine
+			<img src="{base}/github.svg" alt="Github" />
 		</a>
 	</div>
 </div>
@@ -120,6 +116,9 @@
 		align-content: center;
 		display: flex;
 		flex-direction: column;
+		flex-wrap: wrap;
+		margin-left: 1rem;
+		margin-right: 1rem;
 	}
 
 	.block .features {
@@ -146,8 +145,24 @@
 		margin-bottom: 15vh;
 	}
 
+	a {
+		padding: 0;
+		margin: 0;
+	}
+
 	.link {
 		text-decoration: none;
 		color: tomato;
+	}
+
+	.link img {
+		min-height: 2em;
+		max-height: 2em;
+		filter: brightness(0) saturate(100%) invert(100%);
+	}
+
+	.link img:hover {
+		filter: invert(61%) sepia(36%) saturate(6613%) hue-rotate(331deg) brightness(103%)
+			contrast(108%);
 	}
 </style>

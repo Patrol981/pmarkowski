@@ -1,15 +1,52 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { Clock, Euler, MathUtils, Quaternion, Vector3 } from 'three';
-	import type { Scene } from '../lib/scene';
+	import { Clock, Euler, MathUtils, Quaternion, Vector3, Vector2 } from 'three';
+	import { Scene } from '../lib/scene';
 	import Contact from './contact.svelte';
 	import { base } from '$app/paths';
+	import { getHeight, getWidth } from '$lib/utils';
+	import * as THREE from 'three';
+	import { SimplexNoise } from 'three/examples/jsm/math/SimplexNoise';
+	import Vaporwave from '$lib/vaporwave';
 
 	let cnv: HTMLCanvasElement;
 	let scene: Scene;
+	let vaporwave: Vaporwave;
+
+	onMount(async () => {
+		scene = new Scene(75, 3);
+		scene.createScene(cnv);
+		vaporwave = new Vaporwave(scene);
+		vaporwave.init();
+
+		scene.camera.position.setZ(0.7);
+		scene.camera.position.setY(0.2);
+
+		updateSize();
+
+		window.addEventListener('resize', updateSize, false);
+
+		animate();
+	});
+
+	function updateSize() {
+		const size = new Vector2(getWidth(document, 'main-canvas'), getHeight(document, 'main-canvas'));
+		scene.resize(size.x, size.y);
+		vaporwave.resize(size.x, size.y);
+	}
+
+	function animate() {
+		// controls.update();
+		requestAnimationFrame(animate);
+		vaporwave.update();
+		scene.renderer.render(scene.scene, scene.camera);
+	}
 </script>
 
 <div class="content">
+	<div id="main-canvas">
+		<canvas bind:this={cnv} />
+	</div>
 	<div id="me">
 		<p class="title">Hi, I'm <span class="colored">Patrick</span></p>
 		<p class="subtitle">I develop games, game engines <br /> and web applications</p>
@@ -91,19 +128,13 @@
 			</div>
 			<div class="skill selectable">
 				<a href="https://github.com/Patrol981/sql-designer">
-					<img src="{base}/no_img.png" alt="Sql Designer" />
+					<img src="{base}/csharplogo.png" alt="Sql Designer" />
 					<p>SQL Designer</p>
 				</a>
 			</div>
 			<div class="skill selectable">
-				<a href="https://github.com/i-band-pl/drunken-halfling-engine">
-					<img src="{base}/dh_ico.png" alt="Drunken Halfling Engine" />
-					<p>DH Engine</p>
-				</a>
-			</div>
-			<div class="skill selectable">
 				<a href="https://github.com/Patrol981/Dwarf-FontGenerator">
-					<img src="{base}/no_img.png" alt="Dwarf Font Generator" />
+					<img src="{base}/clogo.png" alt="Dwarf Font Generator" />
 					<p>Dwarf Font Generator</p>
 				</a>
 			</div>
@@ -113,18 +144,26 @@
 					<p>Image Processing</p>
 				</a>
 			</div>
+			<div class="skill selectable">
+				<a href="https://github.com/Patrol981/SubjectGuide">
+					<img src="{base}/unitylogo.png" alt="SubjectGuide" />
+					<p>Subject Guide</p>
+				</a>
+			</div>
 		</div>
 	</div>
 
 	<Contact />
 </div>
-<canvas bind:this={cnv} />
 
 <style>
-	canvas {
+	#main-canvas {
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+
 		margin: 0;
 		padding: 0;
-		position: absolute;
 		left: 0;
 		top: 7vh;
 		z-index: -1;
@@ -159,7 +198,7 @@
 		justify-content: center;
 		align-items: center;
 
-		background-color: rgba(28, 28, 33, 0.65);
+		background-color: rgba(28, 28, 33, 0.6);
 	}
 
 	.content div {

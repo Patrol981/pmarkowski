@@ -19,7 +19,7 @@
 	</p>
 	<p>Feel free to check my github page with some cool projects that I was able to make public :D</p>
 
-	<img src="me_box.jpg" alt="MyPhoto" />
+	<img src="me_box2.jpg" alt="MyPhoto" />
 </div>
 
 <style>
