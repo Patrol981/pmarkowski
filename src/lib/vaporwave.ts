@@ -19,6 +19,7 @@ class Vaporwave {
   plane3: THREE.Mesh;
   fog: THREE.Fog;
   effectComposer: EffectComposer;
+  isReady: boolean;
 
   constructor(scene: Scene) {
     this.scene = scene;
@@ -27,16 +28,17 @@ class Vaporwave {
     this.plane3 = THREE.Mesh.prototype;
     this.fog = THREE.Fog.prototype;
     this.effectComposer = EffectComposer.prototype;
+    this.isReady = false;
   }
 
-  init(): void {
+  async init(): Promise<void> {
     const geometry = new THREE.PlaneGeometry(1, 2, 24, 24);
     const material = new THREE.MeshStandardMaterial({
       // Uncomment the following if you wish to visualize the wireframe of our mesh
       // wireframe: true,
       // color: 0xffffff
-      map: this.loadTexture(),
-      displacementMap: this.loadDisplacement(),
+      map: await this.loadTexture(),
+      displacementMap: await this.loadDisplacement(),
       color: new THREE.Color("rgb(255,163,172)")
     });
 
@@ -68,17 +70,19 @@ class Vaporwave {
     this.scene.scene.background = new THREE.Color("rgb(255,174,151)");
     this.addLight();
     this.addPostProcessing();
+
+    this.isReady = true;
   }
 
-  loadTexture(): THREE.Texture {
+  async loadTexture(): Promise<THREE.Texture> {
     const textureLoader = new THREE.TextureLoader();
-    const gridTexture = textureLoader.load(TEXTURE_PATH);
+    const gridTexture = textureLoader.loadAsync(TEXTURE_PATH);
     return gridTexture;
   }
 
-  loadDisplacement(): THREE.Texture {
+  async loadDisplacement(): Promise<THREE.Texture> {
     const textureLoader = new THREE.TextureLoader();
-    return textureLoader.load(DISPLACEMENT_PATH);
+    return textureLoader.loadAsync(DISPLACEMENT_PATH);
   }
 
   addLight(): void {

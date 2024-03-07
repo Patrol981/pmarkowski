@@ -12,12 +12,30 @@
 	let cnv: HTMLCanvasElement;
 	let scene: Scene;
 	let vaporwave: Vaporwave;
+	let currentRGBA = 'rgba(28, 28, 33, 1)';
+	let alpha = 1.0;
 
 	onMount(async () => {
 		scene = new Scene(75, 3);
 		scene.createScene(cnv);
 		vaporwave = new Vaporwave(scene);
-		vaporwave.init();
+
+		await vaporwave.init();
+
+		const fadeOut = () => {
+			const interval = setInterval(() => {
+				alpha -= 0.01;
+				currentRGBA = `rgba(28, 28, 33, ${alpha})`;
+				if (alpha <= 0.6) {
+					clearInterval(interval);
+					alpha = 0.6;
+				}
+			}, 20);
+		};
+
+		fadeOut();
+
+		// currentRGBA = 'rgba(28, 28, 33, 0.6)';
 
 		scene.camera.position.setZ(0.7);
 		scene.camera.position.setY(0.2);
@@ -43,7 +61,7 @@
 	}
 </script>
 
-<div class="content">
+<div class="content" style:background-color={currentRGBA}>
 	<div id="main-canvas">
 		<canvas bind:this={cnv} />
 	</div>
@@ -198,7 +216,11 @@
 		justify-content: center;
 		align-items: center;
 
+		transition: all 0.5 ease-in-out;
+
+		/*
 		background-color: rgba(28, 28, 33, 0.6);
+		*/
 	}
 
 	.content div {
