@@ -6,10 +6,11 @@ import { GammaCorrectionShader } from "three/examples/jsm/shaders/GammaCorrectio
 import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass";
 import { RGBShiftShader } from "three/examples/jsm/shaders/RGBShiftShader";
 import { getHeight, getWidth } from './utils';
+import { base } from '$app/paths';
 
 
-const TEXTURE_PATH = "../../static/grid.png";
-const DISPLACEMENT_PATH = "../../static/displacement.png";
+const TEXTURE_PATH = `${base}/grid.png`;
+const DISPLACEMENT_PATH = `${base}/displacement.png`;
 
 class Vaporwave {
   scene: Scene;
