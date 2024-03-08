@@ -8,6 +8,9 @@
 	import * as THREE from 'three';
 	import { SimplexNoise } from 'three/examples/jsm/math/SimplexNoise';
 	import Vaporwave from '$lib/vaporwave';
+	import Prism from 'prismjs';
+	import * as test from 'prismjs/components';
+	import programmerTraits from '$lib/traitsString';
 
 	let cnv: HTMLCanvasElement;
 	let scene: Scene;
@@ -84,58 +87,53 @@
 		</div>
 	</div>
 
-	<div class="skills">
-		<p class="subtitle">Frameworks I use</p>
-		<div class="skillsbox">
-			<div class="skill selectable">
-				<img src="{base}/dotnetlogo.png" alt=".NET" />
+	<div class="grid2 separator">
+		<div class="skills">
+			<div class="code-container">
+				<section class="file-bar">
+					<div />
+					<div />
+					<div />
+				</section>
+				<div class="code">
+					{@html Prism.highlight(programmerTraits, Prism.languages['clike'], 'clike')}
+				</div>
 			</div>
-			<div class="skill selectable">
-				<img src="{base}/unitylogo.png" alt="Unity3D" />
+
+			<div class="code-comment">
+				{@html Prism.highlight('// Some serious stuff up here', Prism.languages['js'], 'js')}
 			</div>
-			<div class="skill selectable white-filter">
-				<img src="{base}/denologo.png" alt="Deno" />
-			</div>
-			<div class="skill selectable">
-				<img src="{base}/nodejslogo.png" alt="Node.js" />
-			</div>
-			<div class="skill selectable">
-				<img src="{base}/sveltelogo.png" alt="Svelte" />
-			</div>
-			<div class="skill selectable">
-				<img src="{base}/fresh.svg" alt="Fresh" />
-			</div>
-			<div class="skill selectable">
-				<img src="{base}/reactlogo.png" alt="React.js" />
+		</div>
+
+		<div class="skills">
+			<p class="subtitle">Frameworks I use</p>
+			<div class="skillsgrid">
+				<div class="skill selectable">
+					<img src="{base}/dotnetlogo.png" alt=".NET" />
+				</div>
+				<div class="skill selectable">
+					<img src="{base}/unitylogo.png" alt="Unity3D" />
+				</div>
+				<div class="skill selectable white-filter">
+					<img src="{base}/denologo.png" alt="Deno" />
+				</div>
+				<div class="skill selectable">
+					<img src="{base}/nodejslogo.png" alt="Node.js" />
+				</div>
+				<div class="skill selectable">
+					<img src="{base}/sveltelogo.png" alt="Svelte" />
+				</div>
+				<div class="skill selectable">
+					<img src="{base}/fresh.svg" alt="Fresh" />
+				</div>
+				<div class="skill selectable">
+					<img src="{base}/reactlogo.png" alt="React.js" />
+				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="skills">
-		<p class="subtitle">Programmer Traits</p>
-		<div class="skillsbox">
-			<div class="skill">
-				<p>Agile</p>
-			</div>
-			<div class="skill">
-				<p>Scrum</p>
-			</div>
-			<div class="skill">
-				<p>Git</p>
-			</div>
-			<div class="skill">
-				<p>Working in a team</p>
-			</div>
-			<div class="skill">
-				<p>AHA (Avoid hasty abstractions)</p>
-			</div>
-			<div class="skill">
-				<p>SOLID</p>
-			</div>
-		</div>
-	</div>
-
-	<div class="skills">
+	<div class="skills separator">
 		<p class="subtitle">Featured projects</p>
 		<div class="skillsbox">
 			<div class="skill selectable">
@@ -197,14 +195,29 @@
 		width: 100%;
 	}
 
+	.skillsgrid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto;
+		gap: 0.1vw;
+		justify-content: center;
+		position: relative;
+		width: 100%;
+	}
+
 	.skillsbox .skill {
 		margin-left: 2em;
 		margin-right: 2em;
 	}
 
-	.skillsbox .skill img {
+	.skill img {
 		height: 5em;
 		max-height: 5em;
+	}
+
+	.skillsgrid .skill img {
+		height: 4.5em;
+		max-height: 4.5em;
 	}
 
 	.content {
@@ -229,6 +242,84 @@
 
 	.content #me {
 		text-align: left;
+	}
+
+	.grid2 {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+
+	.code-container {
+		margin: 0;
+		padding: 0;
+
+		display: flexbox;
+	}
+
+	.code {
+		white-space: pre-wrap;
+		text-align: justify;
+		background-color: #202020;
+		width: fit-content;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+
+		border-radius: 20px;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+		border: 3px solid rgb(80, 80, 80);
+		border-top: none;
+
+		margin-top: 0;
+	}
+
+	.code-comment {
+	}
+
+	.file-bar {
+		height: 4vh;
+		background-color: rgb(28, 28, 30);
+
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+
+		border: 3px solid rgb(80, 80, 80);
+		border-bottom: 1px solid grey;
+		border-radius: 20px;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	.file-bar div {
+		min-width: 1rem;
+		min-height: 1rem;
+		border-radius: 24px;
+		margin-top: 0.5em;
+		margin-left: 0.5em;
+	}
+
+	.file-bar div:hover {
+		filter: brightness(75%);
+	}
+
+	.file-bar div:nth-of-type(1) {
+		background-color: rgb(255, 105, 97);
+		margin-left: 0.5em;
+	}
+
+	.file-bar div:nth-of-type(2) {
+		background-color: rgb(255, 212, 64);
+	}
+
+	.file-bar div:nth-of-type(3) {
+		background-color: rgb(255, 179, 64);
 	}
 
 	.title {
@@ -292,6 +383,17 @@
 			margin: 0;
 			margin-bottom: 2.5rem;
 			margin-top: 2.5rem;
+		}
+
+		.skillsgrid {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 2em;
+		}
+
+		.code {
+			font-size: small;
 		}
 	}
 </style>

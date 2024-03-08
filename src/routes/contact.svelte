@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { MathUtils } from 'three';
+	import * as THREE from 'three';
 	import { Scene } from '../lib/scene';
 	import { base } from '$app/paths';
 	import { getHeight, getWidth } from '$lib/utils';
@@ -19,7 +19,10 @@
 
 		scene.camera.translateZ(-1);
 		scene.camera.translateY(2.5);
-		scene.camera.rotateX(MathUtils.degToRad(-20));
+		scene.camera.rotateX(THREE.MathUtils.degToRad(-20));
+
+		const ambientLight = new THREE.AmbientLight('#ffffff', 0.6);
+		scene.scene.add(ambientLight);
 
 		animate();
 	});
