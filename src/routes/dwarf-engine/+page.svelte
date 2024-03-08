@@ -51,7 +51,7 @@
 				<p>GLFW</p>
 			</a>
 			<a href="https://opentk.net/">
-				<img src="opentklogo.png" alt="OpenTKLogo" />
+				<img src="{base}/opentklogo.png" alt="OpenTKLogo" />
 				<p>OpenTK</p>
 			</a>
 			<a href="https://github.com/amerkoleci/JoltPhysicsSharp">
