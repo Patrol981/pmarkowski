@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+
 	const myBirthDate = new Date('2000-12-14');
 	const today = new Date();
 	const offset = today.getTime() - myBirthDate.getTime();
@@ -19,7 +21,7 @@
 	</p>
 	<p>Feel free to check my github page with some cool projects that I was able to make public :D</p>
 
-	<img src="me_box2.jpg" alt="MyPhoto" />
+	<img src="{base}/me_box2.jpg" alt="MyPhoto" />
 </div>
 
 <style>
