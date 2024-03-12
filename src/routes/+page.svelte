@@ -267,8 +267,8 @@
 		width: fit-content;
 		padding-left: 2rem;
 		padding-right: 2rem;
-		padding-top: 2rem;
-		padding-bottom: 2rem;
+		padding-top: 0rem;
+		padding-bottom: 1.5rem;
 
 		border-radius: 20px;
 		border-top-left-radius: 0;
