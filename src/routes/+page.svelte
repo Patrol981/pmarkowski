@@ -161,6 +161,12 @@
 				</a>
 			</div>
 			<div class="skill selectable">
+				<a href="https://github.com/Patrol981/StackApiRecruitment">
+					<img src="{base}/csharplogo.png" alt="StackApi" />
+					<p>Stack API</p>
+				</a>
+			</div>
+			<div class="skill selectable">
 				<a href="https://github.com/Patrol981/SubjectGuide">
 					<img src="{base}/unitylogo.png" alt="SubjectGuide" />
 					<p>Subject Guide</p>
